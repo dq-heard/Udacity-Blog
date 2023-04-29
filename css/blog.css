@@ -1,0 +1,176 @@
+h1 {
+    font-size: 2.5em;
+    margin-top: .5rem;
+}
+
+.bio img {
+    display: none;
+}
+
+article {
+    font-size: 1.2em;
+}
+
+u {
+    text-decoration: underline;
+}
+
+bold {
+    font-weight: bold;
+}
+
+blockquote {
+    padding-left: 1.5rem;
+    border-left: .4rem solid rgba(35, 22, 81, .5);
+    font-size: 1em;
+    font-style: italic;
+}
+
+pre code {
+    background-color: #EEEEEE;
+    border: .1rem solid #999999;
+    display: block;
+    padding: 1.6rem;
+}
+
+.right-side {
+    display: none;
+}
+
+.post-nav {
+    margin-bottom: 2rem;
+}
+
+.post-nav a {
+    font-size: 1.1em;
+    border: .1rem solid #0B0033;
+    padding: .3rem;
+    border-radius: .5rem;
+    margin-right: .5rem;
+}
+
+.post-nav a:hover {
+    color: #17A398;
+    border: .1rem solid #17A398;
+}
+
+.hero {
+    display: none;
+}
+
+@media (min-width: 425px) {
+    .bio {
+        display: flex;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        width: 255px;
+    }
+    
+    .bio img {
+        display: block;
+        height: 95px;
+        width: 95px;
+    }
+}
+
+@media (min-width: 600px) {
+    .bio {
+        width: 100%;
+    }
+
+    .bio img {
+        display: block;
+        height: 70px;
+        width: 70px;
+    }
+
+    .wrapper {
+        width: 410px;
+    }
+
+    .hero {
+        display: block;
+        width: 100%;
+    }
+
+    figure {
+        margin-bottom: 2rem;
+    }
+
+    figcaption {
+        font-style: italic;
+    }
+}
+
+@media (min-width: 800px) {
+    main {
+        display: flex;
+    }
+
+    .wrapper {
+        left: -230px;
+    }
+
+    .right-side {
+        display: block;
+        width: 180px;
+        position: absolute;
+        right: 5%;
+        margin-top: 4rem;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    .right-side ul {
+        padding-left: 1rem;
+    }
+
+    .right-side ul a {
+        border: 0;
+    }
+
+    .right-side ul a:hover {
+        border: 0;
+    }
+}
+
+@media (min-width: 1020px) {
+    .wrapper {
+        left: -320px;
+        width: 480px;
+    }
+
+    .wrapper .hero {
+        width: 410px;
+    }
+
+    .right-side {
+        display: grid;
+        grid-template-areas: "box"
+                             "ad";
+        right: 30%;
+        gap: 3em;
+    }
+
+    .box {
+        grid: box;
+    }
+
+    .blog-ad {
+        grid: ad;
+        background-image: url('../media/blog-ad.jpg');
+        background-repeat: no-repeat;
+        background-position-x: 53%;
+        background-position-y: 65%;
+        width: 300px;
+        height: 700px;
+    }
+}
+
+@media (min-width: 1240px) {
+    .wrapper {
+        left: -390px;
+    }
+}

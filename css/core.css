@@ -1,0 +1,167 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "top top"
+                        "side main"
+                        "foot main";
+}
+
+header {
+    grid-area: top;
+    position: fixed;
+    background: #0B0033;
+    height: 4.5rem;
+    top: 0;
+    left: 0; 
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+header a {
+    font-size: 2em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.header-right i {
+    padding-right: .5rem;
+}
+
+.header-right i:hover {
+    color: #17A398;
+}
+
+nav {
+    grid-area: side;
+    position: fixed;
+    padding-top: 5.5rem;
+    width: 35%;
+    height: 90vh;
+    background: #BFBDC1;
+}
+
+nav a {
+    color: #0B0033;
+    font-size: 1.5em;
+    padding-left: .8rem;
+    display: block;
+}
+
+nav a:hover {
+    color: #17A398;
+}
+
+.cta-nav {
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-left: .6rem;
+}
+
+.cta-nav a {
+    border: .1rem solid #FFFFFF;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    font-size: 1.8em;
+    padding-right: .6rem;
+    display: inline-block;
+}
+
+.cta-nav .spacer {
+    height: .5rem;
+}
+
+.cta-nav .login {
+    background: #0B0033;
+}
+
+.cta-nav .login:hover {
+    background: #FFFFFF;
+    color: #0B0033;
+    border: .1rem solid #0B0033;
+}
+
+.cta-nav .follow {
+    background: #6D6A75;
+}
+
+.cta-nav .follow:hover {
+    background: #FFFFFF;
+    color: #6D6A75;
+    border: .1rem solid #6D6A75;
+}
+
+footer {
+    grid-area: foot;
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    height: 10vh;
+    background: #231651;
+    color: #FFFFFF;
+    padding: 2rem 1rem 0;
+}
+
+@media (min-width: 425px) {
+    html {
+        font-size: 70%;
+    }
+
+    nav, footer {
+        width: 150px;
+    }
+}
+
+@media (min-width: 720px) {
+    html {
+        font-size: 75%;
+    }
+
+    .box {
+        width: 330px;
+    }
+
+    .right-side .box {
+        width: 180px;
+        box-shadow: 0;
+    }
+
+    footer {
+        padding-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1020px) {
+    .right-side .box {
+        width: 300px;
+    }
+}

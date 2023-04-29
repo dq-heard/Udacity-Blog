@@ -1,0 +1,161 @@
+main {
+    grid-area: main;
+    width: 100%;
+    padding-left: 40%;
+    padding-right: 2rem;
+    padding-top: 5rem;
+}
+
+.box {
+    margin-bottom: 1.5rem;
+    border: .1rem solid #0B0033;
+    padding: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(35, 22, 81, .5);
+    border-radius: .5rem;
+}
+
+.box span {
+    font-size: 1.2em;
+}
+
+.box h2 {
+    font-size: 1.5em;
+}
+
+.box p {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.box a {
+    border: .1rem solid #0B0033;
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+.box a:hover {
+    color: #17A398;
+    border: .1rem solid #17A398;
+}
+
+.box .world {
+    color: green;
+}
+
+.box .culture {
+    color: purple;
+}
+
+.box .science {
+    color: deepskyblue;
+}
+
+.box .sports {
+    color: gold;
+}
+
+.box .gov {
+    color: crimson;
+}
+
+.box .tech {
+    color: orange;
+}
+
+.box img {
+    display: none;
+}
+
+@media (min-width: 425px) {
+    main {
+        padding-left: 175px;
+    }
+}
+
+@media (min-width: 600px) {
+    main {
+        position: relative;
+        padding-left: 0;
+    }
+
+    .container, .wrapper {
+        position: absolute;
+        left: -115px;
+    }
+
+    .box {
+        width: 385px;
+    }
+}
+
+@media (min-width: 720px) {
+    .container, .wrapper {
+        left: -175px;
+        padding-top: 1em;
+    }
+
+    .ad-banner {
+        display: grid;
+        grid-template-areas: "top"
+                             "bottom";
+        position: absolute;
+        right: 0;
+        gap: 1rem;
+        width: 200px;
+        margin-top: 1rem;
+    }
+
+    .top-ad {
+        grid-area: top;
+        background-image: url('../media/top-ad.jpg');
+        background-repeat: no-repeat;
+        background-position-x: 33%;
+        height: 620px;
+    }
+
+    .bottom-ad {
+        grid-area: bottom;
+        background-image: url('../media/bottom-ad.jpg');
+        background-repeat: no-repeat;
+        background-position-x: 51%;
+        background-position-y: 30%;
+        height: 620px;
+    }
+
+    .box img {
+        display: block;
+        width: 21rem;
+        height: 15rem;
+        background-size: cover;
+        margin: 1rem auto 1.5rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    html {
+        font-size: 80%;
+    }
+
+    .container {
+        left: -350px;
+    }
+
+    .row {
+        display: flex;
+        margin-bottom: 3rem;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1240px) {
+    .container, .wrapper {
+        left: -390px;
+    }
+
+    .top-ad {
+        background-position-x: 30%;
+    }
+    .ad-banner {
+        width: 240px;
+    }
+}
